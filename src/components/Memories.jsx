@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-import memory1 from '../assets/g-1.jpg';
-import memory2 from '../assets/g-2.jpg';
-import memory3 from '../assets/g-3.jpg';
-import memory4 from '../assets/g-4.jpg';
-import memory5 from '../assets/g-5.jpg';
-import memory6 from '../assets/g-6.jpg';
-import memory7 from '../assets/g-7.jpg';
+import memory1 from '../assets/memory-1.jpeg';
+import memory2 from '../assets/memory-2.jpeg';
+import memory3 from '../assets/memory-3.jpeg';
+import memory4 from '../assets/memory-4.jpeg';
+import memory5 from '../assets/memory-5.jpeg';
+import memory6 from '../assets/memory-6.jpeg';
+import memory7 from '../assets/memory-7.jpeg';
 
 const photos = [
     { id: 1, src: memory1, alt: 'Romantic moment' },

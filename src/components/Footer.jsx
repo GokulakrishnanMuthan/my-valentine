@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="flex items-center justify-center gap-2 mb-2">
                 <span>Made with endless love</span>
                 <Heart size={16} fill="currentColor" className="text-rose-500" />
-                <span>for Kavitha</span>
+                <span>for Sandeep</span>
             </div>
             <p className="text-sm opacity-70">Yours Forever & Always</p>
         </footer>

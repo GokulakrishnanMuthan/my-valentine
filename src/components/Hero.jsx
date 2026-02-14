@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart } from 'lucide-react';
+import LoveCounter from './LoveCounter';
 
 const Hero = () => {
     const scrollToTimeline = () => {
@@ -53,7 +54,7 @@ const Hero = () => {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.5, duration: 0.8 }}
                 >
-                    Happy Valentine’s Day,<br />Kavitha ❤️
+                    Happy Valentine’s Day,<br />Sandeep ❤️
                 </motion.h1>
 
                 <motion.p
@@ -62,8 +63,10 @@ const Hero = () => {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 1, duration: 0.8 }}
                 >
-                    "Since <span className="font-semibold text-rose-500">29.04.2022</span>, every day with you is my favorite day."
+                    "Since <span className="font-semibold text-rose-500">5-7-2015</span>, every day with you is my favorite day."
                 </motion.p>
+
+                <LoveCounter />
 
                 <motion.button
                     onClick={scrollToTimeline}

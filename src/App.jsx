@@ -6,6 +6,7 @@ import LoveReasons from './components/LoveReasons';
 import Memories from './components/Memories';
 import Surprise from './components/Surprise';
 import Footer from './components/Footer';
+import MusicPlayer from './components/MusicPlayer';
 
 function App() {
   return (
@@ -14,9 +15,10 @@ function App() {
       <Timeline />
       <Gallery />
       <LoveReasons />
-      <Memories />
+      {/* <Memories /> */}
       <Surprise />
       <Footer />
+      <MusicPlayer />
     </div>
   );
 }

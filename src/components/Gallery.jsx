@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
-import memory1 from '../assets/memory-1.jpg';
-import memory2 from '../assets/memory-2.jpg';
-import memory3 from '../assets/memory-3.jpg';
-import memory4 from '../assets/memory-4.jpg';
-import memory5 from '../assets/memory-5.jpg';
-import memory6 from '../assets/memory-6.JPEG';
+import memory1 from '../assets/memory-1.jpeg';
+import memory2 from '../assets/memory-2.jpeg';
+import memory3 from '../assets/memory-3.jpeg';
+import memory4 from '../assets/memory-4.jpeg';
+import memory5 from '../assets/memory-5.jpeg';
+import memory6 from '../assets/memory-6.jpeg';
+import memory7 from '../assets/memory-7.jpeg';
 
 const photos = [
     { id: 1, src: memory1, alt: 'Romantic moment' },
