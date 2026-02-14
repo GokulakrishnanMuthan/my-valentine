@@ -3,7 +3,6 @@ import Hero from './components/Hero';
 import Timeline from './components/Timeline';
 import Gallery from './components/Gallery';
 import LoveReasons from './components/LoveReasons';
-import Memories from './components/Memories';
 import Surprise from './components/Surprise';
 import Footer from './components/Footer';
 import MusicPlayer from './components/MusicPlayer';
@@ -15,7 +14,6 @@ function App() {
       <Timeline />
       <Gallery />
       <LoveReasons />
-      {/* <Memories /> */}
       <Surprise />
       <Footer />
       <MusicPlayer />
