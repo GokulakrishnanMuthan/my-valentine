@@ -7,7 +7,7 @@ import memory2 from '../assets/memory-2.jpeg';
 import memory3 from '../assets/memory-3.jpeg';
 import memory4 from '../assets/memory-4.jpeg';
 import memory5 from '../assets/memory-5.jpeg';
-import memory6 from '../assets/memory-6.jpeg';
+import memory6 from '../assets/memory-6.JPEG';
 
 const photos = [
     { id: 1, src: memory1, alt: 'Romantic moment' },
