@@ -7,7 +7,7 @@ import memory2 from '../assets/memory-2.png';
 import memory3 from '../assets/memory-3.jpeg';
 import memory4 from '../assets/memory-4.jpeg';
 import memory5 from '../assets/memory-5.jpeg';
-import memory6 from '../assets/memory-6.jpeg';
+import memory6 from '../assets/memory-6.JPEG';
 import memory7 from '../assets/memory-7.jpeg';
 import memory8 from '../assets/memory-8.jpeg';
 import memory9 from '../assets/memory-9.jpeg';
