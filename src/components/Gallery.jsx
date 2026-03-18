@@ -2,12 +2,19 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
-import memory1 from '../assets/memory-1.jpeg';
-import memory2 from '../assets/memory-2.jpeg';
+import memory1 from '../assets/memory-1.png';
+import memory2 from '../assets/memory-2.png';
 import memory3 from '../assets/memory-3.jpeg';
 import memory4 from '../assets/memory-4.jpeg';
 import memory5 from '../assets/memory-5.jpeg';
-import memory6 from '../assets/memory-6.JPEG';
+import memory6 from '../assets/memory-6.jpeg';
+import memory7 from '../assets/memory-7.jpeg';
+import memory8 from '../assets/memory-8.jpeg';
+import memory9 from '../assets/memory-9.jpeg';
+import memory10 from '../assets/memory-10.jpeg';
+import memory11 from '../assets/memory-11.jpeg';
+
+
 
 const photos = [
     { id: 1, src: memory1, alt: 'Romantic moment' },
@@ -15,7 +22,12 @@ const photos = [
     { id: 3, src: memory3, alt: 'Wedding vibes' },
     { id: 4, src: memory4, alt: 'Love' },
     { id: 5, src: memory5, alt: 'Us' },
-    { id: 6, src: memory6, alt: 'Forever' },
+    { id: 6, src: memory6, alt: 'Forever' },    
+    { id: 7, src: memory7, alt: 'Happiness' },
+    { id: 8, src: memory8, alt: 'Joy' },
+    { id: 9, src: memory9, alt: 'Togetherness' },
+    { id: 10, src: memory10, alt: 'Our Story' },
+    { id: 11, src: memory11, alt: 'Memories' },
 ];
 
 const Gallery = () => {

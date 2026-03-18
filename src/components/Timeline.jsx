@@ -4,29 +4,35 @@ import { Heart, Calendar, MapPin, Camera } from 'lucide-react';
 
 const events = [
     {
-        date: '26-01-2015',
+        date: '08-12-2016',
         title: 'Our First Meet',
         description: 'The moment our eyes met, and I knew this was the beginning of something special.',
         icon: <Heart className="w-6 h-6" />,
     },
     {
-        date: '05-07-2015',
+        date: '06-09-2018',
+        title: 'Our Engagement',
+        description: 'Where our forever began—sealed with love, joy, and a promise to always stand together.',
+        icon: <Heart className="w-6 h-6" />,
+    },
+    {
+        date: '13-06-2019',
         title: 'Our Marriage',
         description: 'The day we promised forever. The most beautiful chapter of our lives began here.',
         icon: <Heart className="w-6 h-6" />,
     },
     {
-        date: '29-02-2016',
-        title: 'Baby Confirmation',
+        date: '28-08-2025',
+        title: 'Baby Shower',
         description: 'Celebrating the blessing of new life and the beautiful journey of parenthood.',
         icon: <Heart className="w-6 h-6" />,
     },
     {
-        date: '18-10-2016',
-        title: 'Our Son Aarav Born',
-        description: 'Our little prince arrived, filling our world with endless joy and love.',
-        icon: <Heart className="w-6 h-6" />,
-    },
+    date: '20-11-2025',
+    title: 'Blessed with Twins',
+    description: 'Two little miracles entered our lives, bringing double the love, laughter, and a lifetime of beautiful moments.',
+    icon: <Heart className="w-6 h-6" />,
+},
     {
         date: '14.02.2026',
         title: 'Valentine’s Day',

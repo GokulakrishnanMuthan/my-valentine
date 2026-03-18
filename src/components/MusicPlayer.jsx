@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Music, Volume2, VolumeX } from 'lucide-react';
-import bgMusic from '../assets/Malare-Ninne.mp3';
+import bgMusic from '../assets/En-Jeevan.mp3';
 
 const MusicPlayer = () => {
     const [isPlaying, setIsPlaying] = useState(false);

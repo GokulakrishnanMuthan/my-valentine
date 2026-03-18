@@ -54,7 +54,7 @@ const Hero = () => {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.5, duration: 0.8 }}
                 >
-                    Happy Valentine’s Day,<br />Sandeep ❤️
+                    Happy Valentine’s Day,<br />Manjusha ❤️
                 </motion.h1>
 
                 <motion.p
@@ -63,7 +63,7 @@ const Hero = () => {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 1, duration: 0.8 }}
                 >
-                    "Since <span className="font-semibold text-rose-500">5-7-2015</span>, every day with you is my favorite day."
+                    "Since <span className="font-semibold text-rose-500">8-12-2016</span>, every day with you is my favorite day."
                 </motion.p>
 
                 <LoveCounter />

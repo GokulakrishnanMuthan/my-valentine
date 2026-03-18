@@ -75,7 +75,7 @@ const Surprise = () => {
                             <Heart size={60} fill="currentColor" />
                         </motion.div>
 
-                        <h3 className="text-3xl font-bold text-rose-600 mb-6 font-great-vibes">My Dearest Sandeep,</h3>
+                        <h3 className="text-3xl font-bold text-rose-600 mb-6 font-great-vibes">My Dearest Manjusha,</h3>
                         <p className="text-xl text-gray-700 leading-relaxed font-light mb-6">
                             "I promise to love you more every single day. <br />
                             You are my forever and always."

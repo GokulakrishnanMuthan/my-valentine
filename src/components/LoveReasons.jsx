@@ -156,7 +156,7 @@ const LoveReasons = () => {
                             >
                                 <Heart className="w-20 h-20 text-rose-500 mx-auto mb-6 fill-current animate-pulse drop-shadow-lg" />
                                 <h3 className="text-3xl md:text-5xl font-great-vibes text-rose-600 mb-6 leading-tight drop-shadow-md">
-                                    Sandeep, you are the best decision of my life ❤️
+                                    Manjusha, you are the best decision of my life ❤️
                                 </h3>
                                 <p className="text-rose-400 font-light tracking-widest text-sm uppercase">
                                     Forever & Always
