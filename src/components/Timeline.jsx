@@ -1,103 +1,78 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Calendar, MapPin, Camera } from 'lucide-react';
+import SceneWrapper from './SceneWrapper';
 
-const events = [
+const scenes = [
     {
+        id: 'scene-1',
         date: '08-12-2016',
-        title: 'Our First Meet',
+        title: 'The Beginning',
+        subtitle: 'Scene I: Our First Meet',
         description: 'The moment our eyes met, and I knew this was the beginning of something special.',
-        icon: <Heart className="w-6 h-6" />,
+        bg: 'https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?auto=format&fit=crop&q=80&w=2574',
     },
     {
+        id: 'scene-2',
         date: '06-09-2018',
-        title: 'Our Engagement',
+        title: 'The Promise',
+        subtitle: 'Scene II: Our Engagement',
         description: 'Where our forever began—sealed with love, joy, and a promise to always stand together.',
-        icon: <Heart className="w-6 h-6" />,
+        bg: 'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=2670',
     },
     {
+        id: 'scene-3',
         date: '13-06-2019',
-        title: 'Our Marriage',
+        title: 'The Wedding',
+        subtitle: 'Scene III: Our Marriage',
         description: 'The day we promised forever. The most beautiful chapter of our lives began here.',
-        icon: <Heart className="w-6 h-6" />,
+        bg: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=2670',
     },
     {
-        date: '28-08-2025',
-        title: 'Baby Shower',
-        description: 'Celebrating the blessing of new life and the beautiful journey of parenthood.',
-        icon: <Heart className="w-6 h-6" />,
-    },
-    {
-    date: '20-11-2025',
-    title: 'Blessed with Twins',
-    description: 'Two little miracles entered our lives, bringing double the love, laughter, and a lifetime of beautiful moments.',
-    icon: <Heart className="w-6 h-6" />,
-},
-    {
-        date: '14.02.2026',
-        title: 'Valentine’s Day',
-        description: 'Celebrating our love today and forever. You are my greatest gift.',
-        icon: <Heart className="w-6 h-6" />,
+        id: 'scene-4',
+        date: '20-11-2025',
+        title: 'The Miracle',
+        subtitle: 'Scene IV: Blessed with Twins',
+        description: 'Two little miracles entered our lives, bringing double the love, laughter, and a lifetime of beautiful moments.',
+        bg: 'https://images.unsplash.com/photo-1555252333-978fead067f9?auto=format&fit=crop&q=80&w=2670',
     },
 ];
 
-const TimelineItem = ({ event, index }) => {
+const TimelineScene = ({ scene, index }) => {
     return (
-        <motion.div
-            className={`flex flex-col md:flex-row items-center justify-between w-full mb-8 md:mb-12 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: index * 0.2 }}
+        <SceneWrapper 
+            id={scene.id}
+            title={scene.title}
+            subtitle={scene.subtitle}
+            bgImage={scene.bg}
+            overlayOpacity={0.25}
         >
-            <div className="w-full md:w-5/12 mb-4 md:mb-0 pl-12 md:pl-0 relative">
-                {/* Mobile Icon (Absolute positioned) */}
-                <div className="absolute left-0 top-0 md:hidden w-8 h-8 bg-rose-500 rounded-full flex items-center justify-center text-white shadow-lg border-4 border-rose-200 z-10">
-                    {event.icon}
+            <motion.div
+                className="max-w-4xl mx-auto text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 1.5, ease: [0.2, 0, 0, 1] }}
+            >
+                <div className="glass-effect p-10 md:p-16 border border-white/40 shadow-premium">
+                    <span className="text-romantic-rose/60 font-cinzel tracking-[0.3em] uppercase text-xs mb-4 block font-bold">
+                        {scene.date}
+                    </span>
+                    <p className="text-gray-700 text-xl md:text-3xl font-playfair italic leading-relaxed">
+                        "{scene.description}"
+                    </p>
+                    <div className="h-[1px] w-24 bg-romantic-gold/20 mx-auto mt-10" />
                 </div>
-
-                <div className="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-rose-400 hover:shadow-xl transition-shadow relative">
-                    {/* Desktop Arrow (Optional, keeping simple for now) */}
-                    <span className="text-rose-500 font-bold text-sm uppercase tracking-wider block mb-1">{event.date}</span>
-                    <h3 className="text-xl font-bold text-gray-800">{event.title}</h3>
-                    <p className="text-gray-600 mt-2">{event.description}</p>
-                </div>
-            </div>
-
-            {/* Desktop Icon (Center Spine) */}
-            <div className="hidden md:flex w-8 h-8 bg-rose-500 rounded-full items-center justify-center text-white shadow-lg border-4 border-rose-200 z-10">
-                {event.icon}
-            </div>
-
-            <div className="w-full md:w-5/12 hidden md:block"></div>
-        </motion.div>
+            </motion.div>
+        </SceneWrapper>
     );
 };
 
 const Timeline = () => {
     return (
-        <section id="timeline" className="py-20 bg-rose-50 relative overflow-hidden">
-            <div className="container mx-auto px-4">
-                <motion.h2
-                    className="text-4xl font-great-vibes text-center text-rose-600 mb-12"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                >
-                    Our Love Story
-                </motion.h2>
-
-                <div className="relative wrap overflow-hidden p-4 h-full">
-                    {/* Vertical Line: Left on mobile, Center on desktop */}
-                    <div className="absolute border-opacity-20 border-rose-500 h-full border-l-2 left-8 md:left-1/2 transform -translate-x-1/2"></div>
-
-                    <div className="flex flex-col items-center">
-                        {events.map((event, index) => (
-                            <TimelineItem key={index} event={event} index={index} />
-                        ))}
-                    </div>
-                </div>
-            </div>
+        <section id="timeline">
+            {scenes.map((scene, index) => (
+                <TimelineScene key={scene.id} scene={scene} index={index} />
+            ))}
         </section>
     );
 };

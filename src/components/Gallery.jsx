@@ -34,33 +34,39 @@ const Gallery = () => {
     const [selectedId, setSelectedId] = useState(null);
 
     return (
-        <section id="gallery" className="py-20 bg-gradient-to-b from-rose-50 to-pink-100">
-            <div className="container mx-auto px-4">
-                <motion.h2
-                    className="text-4xl font-great-vibes text-center text-rose-600 mb-12"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+        <section id="gallery" className="relative py-32 bg-romantic-cream/50">
+            <div className="container mx-auto px-6">
+                <motion.div
+                    className="flex flex-col items-center mb-24"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
+                    transition={{ duration: 2, ease: [0.2, 0, 0, 1] }}
                 >
-                    Our Beautiful Memories 📸
-                </motion.h2>
+                    <span className="text-romantic-rose/40 font-cinzel tracking-[0.5em] uppercase text-xs mb-6">The Gallery</span>
+                    <h2 className="text-5xl md:text-8xl font-playfair italic text-gray-800 text-center leading-tight">
+                        Our Beautiful Memories
+                    </h2>
+                    <div className="w-24 h-[1px] bg-romantic-rose/20 mt-10" />
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
                     {photos.map((photo) => (
                         <motion.div
                             key={photo.id}
                             layoutId={`card-${photo.id}`}
                             onClick={() => setSelectedId(photo.id)}
-                            className="cursor-pointer overflow-hidden rounded-2xl shadow-md bg-white aspect-[4/3] relative group"
-                            whileHover={{ scale: 1.02, shadow: "0px 10px 20px rgba(0,0,0,0.1)" }}
+                            className="cursor-pointer overflow-hidden aspect-[3/4] relative group shadow-premium ring-1 ring-black/5"
+                            whileHover={{ y: -10 }}
+                            transition={{ duration: 0.8, ease: [0.2, 0, 0, 1] }}
                         >
                             <motion.img
                                 src={photo.src}
                                 alt={photo.alt}
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <span className="text-white font-medium bg-black/50 px-4 py-2 rounded-full backdrop-blur-sm">View</span>
+                            <div className="absolute inset-0 bg-gradient-to-t from-romantic-rose/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-end p-10">
+                                <span className="text-white font-cinzel text-xs tracking-[0.3em] uppercase border-b border-white/40 pb-2">View Scene</span>
                             </div>
                         </motion.div>
                     ))}
@@ -72,24 +78,42 @@ const Gallery = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
+                            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-12"
                             onClick={() => setSelectedId(null)}
                         >
-                            <div className="relative max-w-4xl w-full max-h-[90vh] flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
+                            <motion.div 
+                                className="absolute inset-0 bg-romantic-cream/95 backdrop-blur-xl"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                            />
+                            
+                            <div className="relative max-w-6xl w-full h-full flex flex-col items-center justify-center" onClick={(e) => e.stopPropagation()}>
                                 <motion.button
-                                    className="absolute -top-12 right-0 text-white hover:text-rose-400 transition-colors"
+                                    className="absolute top-0 right-0 p-4 text-gray-400 hover:text-gray-800 transition-colors z-[110]"
                                     onClick={() => setSelectedId(null)}
+                                    whileHover={{ rotate: 90, scale: 1.2 }}
                                 >
-                                    <X size={32} />
+                                    <X size={40} strokeWidth={1} />
                                 </motion.button>
+
                                 {photos.map(photo => photo.id === selectedId && (
-                                    <motion.img
+                                    <motion.div
                                         key={photo.id}
                                         layoutId={`card-${photo.id}`}
-                                        src={photo.src}
-                                        alt={photo.alt}
-                                        className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
-                                    />
+                                        className="relative w-full h-full flex flex-col items-center justify-center gap-8"
+                                    >
+                                        <div className="relative overflow-hidden shadow-2xl ring-1 ring-black/10 rounded-lg">
+                                            <img
+                                                src={photo.src}
+                                                alt={photo.alt}
+                                                className="max-w-full max-h-[75vh] object-contain"
+                                            />
+                                        </div>
+                                        <p className="text-romantic-rose/40 font-cinzel tracking-[0.4em] uppercase text-sm mt-4 font-bold">
+                                            STILL FROM SCENE {photo.id}
+                                        </p>
+                                    </motion.div>
                                 ))}
                             </div>
                         </motion.div>
